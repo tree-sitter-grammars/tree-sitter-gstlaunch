@@ -99,16 +99,18 @@ video/x-raw-yuv,format=(fourcc)YUY2;video/x-raw-yuv,format=(fourcc)YV12
   (fragment
     (element
       (caps
-        (identifier)
-        (identifier)
-        (property
+        (cap
           (identifier)
-          (value))
-        (identifier)
-        (identifier)
-        (property
           (identifier)
-          (value))))
+          (property
+            (identifier)
+            (value)))
+        (cap
+          (identifier)
+          (identifier)
+          (property
+            (identifier)
+            (value)))))
     (element
       (simple_element
         (identifier))))
@@ -118,16 +120,18 @@ video/x-raw-yuv,format=(fourcc)YUY2;video/x-raw-yuv,format=(fourcc)YV12
         (identifier)))
     (element
       (caps
-        (identifier)
-        (identifier)
-        (property
+        (cap
           (identifier)
-          (value))
-        (identifier)
-        (identifier)
-        (property
           (identifier)
-          (value))))
+          (property
+            (identifier)
+            (value)))
+        (cap
+          (identifier)
+          (identifier)
+          (property
+            (identifier)
+            (value)))))
     (element
       (simple_element
         (identifier)))))

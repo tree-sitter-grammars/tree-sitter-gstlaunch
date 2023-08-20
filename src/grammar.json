@@ -265,7 +265,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_cap"
+          "name": "cap"
         },
         {
           "type": "REPEAT",
@@ -278,14 +278,14 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_cap"
+                "name": "cap"
               }
             ]
           }
         }
       ]
     },
-    "_cap": {
+    "cap": {
       "type": "SEQ",
       "members": [
         {

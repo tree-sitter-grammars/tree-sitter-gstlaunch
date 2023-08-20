@@ -30,7 +30,7 @@
     }
   },
   {
-    "type": "caps",
+    "type": "cap",
     "named": true,
     "fields": {},
     "children": {
@@ -43,6 +43,21 @@
         },
         {
           "type": "property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "caps",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "cap",
           "named": true
         }
       ]

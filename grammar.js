@@ -54,8 +54,8 @@ module.exports = grammar({
 
 
         //MIMETYPE [, PROPERTY[, PROPERTY ...]]] [; CAPS[; CAPS ...]]
-        caps: $ => sep1($._cap, ";"),
-        _cap: $ => seq($.identifier, "/", $.identifier, optional(seq(",", sep1($.property, ",")))),
+        caps: $ => sep1($.cap, ";"),
+        cap: $ => seq($.identifier, "/", $.identifier, optional(seq(",", sep1($.property, ",")))),
 
         mimetype: _ => token.immediate(/[\w-]+\/[\w-]+/),
     }
