@@ -1,10 +1,10 @@
 [package]
-name = "tree-sitter-glsl"
-description = "GLSL grammar for the tree-sitter parsing library"
+name = "tree-sitter-gstlaunch"
+description = "GStreamer pipeline grammar for the tree-sitter parsing library"
 version = "0.1.4"
 keywords = ["incremental", "parsing", "gstreamer", "gst-launch"]
 categories = ["parsing", "text-editors"]
-repository = "https://github.com/theHamsta/tree-sitter-glsl"
+repository = "https://github.com/theHamsta/tree-sitter-gstlaunch"
 edition = "2021"
 license = "MIT"
 authors = [ "Stephan Seitz"]
