@@ -6,13 +6,12 @@ module.exports = grammar({
     ],
 
     conflicts: $ => [
-        //[$.element],
         [$.caps],
         [$.simple_element],
         [$.bin, $.simple_element, $.reference]
-        //[$.element, $.fragment],
     ],
-    //https://gstreamer.freedesktop.org/documentation/tools/gst-launch.html?gi-language=c#pipeline-description
+
+    // https://gstreamer.freedesktop.org/documentation/tools/gst-launch.html?gi-language=c#pipeline-description
     // https://github.com/GStreamer/gstreamer/blob/07b18a6de526dcf90b4bdff0422fef1670bf3e8c/subprojects/gstreamer/gst/parse/parse.l
 
     rules: {
