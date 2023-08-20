@@ -237,3 +237,26 @@ filesrc location="music mp3" foo=99 \
     (element
       (simple_element
         (identifier)))))
+
+================================================================================
+Multi-pad references
+================================================================================
+
+filesrc .src_0,src_1 ! .sink0,sink1 foo
+--------------------------------------------------------------------------------
+
+(pipeline
+  (fragment
+    (element
+      (reference
+        (identifier)
+        (identifier)
+        (identifier)))
+    (element
+      (reference
+        (identifier)
+        (identifier))))
+  (fragment
+    (element
+      (simple_element
+        (identifier)))))

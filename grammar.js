@@ -43,7 +43,7 @@ module.exports = grammar({
         bin: $ => seq(field("type", $.identifier), ".", "(", repeat($.property), repeat($.fragment), ")"),
 
         simple_element: $ => seq(field("type", $.identifier), repeat($.property)),
-        reference: $ => seq(optional(field("element", $.identifier)), ".", field("pad", $.identifier)),
+        reference: $ => seq(optional(field("element", $.identifier)), ".", sep1(field("pad", $.identifier), ",")),
         property: $ => seq(field("key", $.identifier), "=", field("value", $.value)),
 
         // tree-sitter-c
