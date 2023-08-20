@@ -14,9 +14,11 @@ filesrc location=music.mp3 ! mad ! audioconvert ! audioresample ! osssink
         (identifier)
         (property
           (identifier)
-          (ERROR
-            (string_content)
-            (identifier))
+          (value
+            (string_literal
+              (string_content))))
+        (property
+          (identifier)
           (value))))
     (element
       (simple_element
@@ -67,9 +69,11 @@ filesrc
         (identifier)
         (property
           (identifier)
-          (ERROR
-            (string_content)
-            (identifier))
+          (value
+            (string_literal
+              (string_content))))
+        (property
+          (identifier)
           (value))))
     (element
       (simple_element
@@ -191,6 +195,44 @@ Reference
         (identifier)))
     (element
       (reference
+        (identifier)))
+    (element
+      (simple_element
+        (identifier)))))
+
+================================================================================
+Allow bash line breaks
+================================================================================
+
+filesrc location="music mp3" foo=99 \
+  ! mad \
+  ! audioconvert \
+  ! audioresample \
+  ! osssink
+
+--------------------------------------------------------------------------------
+
+(pipeline
+  (fragment
+    (element
+      (simple_element
+        (identifier)
+        (property
+          (identifier)
+          (value
+            (string_literal
+              (string_content))))
+        (property
+          (identifier)
+          (value))))
+    (element
+      (simple_element
+        (identifier)))
+    (element
+      (simple_element
+        (identifier)))
+    (element
+      (simple_element
         (identifier)))
     (element
       (simple_element

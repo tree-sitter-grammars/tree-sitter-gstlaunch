@@ -2,7 +2,7 @@ module.exports = grammar({
     name: 'gstlaunch',
 
     extras: _ => [
-        /\s|\r?\n/
+        /\s|\\\r?\n/
     ],
 
     conflicts: $ => [
@@ -25,19 +25,19 @@ module.exports = grammar({
             $.reference,
         ),
 
-        string_literal: $ => seq(
-            '"',
-            repeat(choice(
-                alias(token.immediate(prec(1, /[^\\"\n]+/)), $.string_content),
-                //$.escape_sequence,
-            )),
-            '"',
-            "'",
-            repeat(choice(
-                alias(token.immediate(prec(1, /[^\\"\n]+/)), $.string_content),
-                //$.escape_sequence,
-            )),
-            "'",
+        string_literal: $ => choice(
+            seq('"',
+                repeat(choice(
+                    alias(token.immediate(prec(1, /[^\\"\n]+/)), $.string_content),
+                    //$.escape_sequence,
+                )),
+                '"'),
+            seq("'",
+                repeat(choice(
+                    alias(token.immediate(prec(1, /[^\\"\n]+/)), $.string_content),
+                    //$.escape_sequence,
+                )),
+                '"'),
         ),
 
         bin: $ => seq(field("type", $.identifier), ".", "(", repeat($.property), repeat($.fragment), ")"),
