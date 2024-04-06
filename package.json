@@ -40,5 +40,11 @@
   "devDependencies": {
     "tree-sitter-cli": "^0.22.2",
     "prebuildify": "^6.0.0"
-  }
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.gstlaunch",
+      "file-types": []
+    }
+  ]
 }
