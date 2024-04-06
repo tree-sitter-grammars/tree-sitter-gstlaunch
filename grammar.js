@@ -6,7 +6,6 @@ module.exports = grammar({
     ],
 
     conflicts: $ => [
-        [$.caps],
         [$.simple_element],
         [$.bin, $.simple_element, $.reference]
     ],
